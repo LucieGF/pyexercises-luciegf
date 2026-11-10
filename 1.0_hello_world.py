@@ -22,10 +22,10 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My message, and why:
+# 1. In: Nothing is typed by the user. The only input is the message and the number of lines, which I chose myself.
+# 2. Process: The program prints the same message 5 times, and I write the line number by hand each time.
+# 3. Out: 5 lines on the screen, each starting with its number (1 to 5), followes by my message (my name).
+# 4. My message, and why: I chose my first name "Lucie" because the teacher told us to use our own name.
 
 
 # Your code below
