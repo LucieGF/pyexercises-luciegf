@@ -25,3 +25,22 @@ Printing in Python is done with the `print()` function.
 ```
 
 What is the first argument of the `print()` function?
+
+---
+## 2026-11-10 15:24, in .
+
+**Me:** how to get input from user in python
+
+**Tutor:**
+
+Getting input from a user is done with the `input()` function.
+
+```python
+# TODO: ask the user for their name
+user_name = ______("What is your name? ")
+
+# TODO: print a greeting using the name they gave
+print("Hello, " + user_name)
+```
+
+What function takes the prompt string as its argument?
