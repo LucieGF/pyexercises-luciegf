@@ -80,3 +80,83 @@ print(uppercase_sentence)
 ```
 
 Question: Which string method converts a string to uppercase?
+
+---
+## 2026-11-11 14:58, in .
+
+**Me:** For a division, what is the difference between using / and //?
+
+**Tutor:**
+
+Division types in Python.
+
+- `/` returns a float (decimal) result.
+- `//` returns an integer (whole number) result, rounding down.
+
+Pattern:
+
+```python
+# TODO: replace alpha and beta with your numbers
+result_float = alpha / beta
+result_int   = alpha // beta
+```
+
+Which function gives the decimal result?
+
+---
+## 2026-11-11 15:11, in .
+
+**Me:** How to ask is a number is odd or even?
+
+**Tutor:**
+
+Checking if a number is odd or even is done with the modulus operator.
+
+```python
+def is_even(number):
+    # TODO: return True if number is even, False otherwise
+    pass
+
+# Example usage
+print(is_even(4))  # True
+print(is_even(5))  # False
+```
+
+What is the result of `is_even(0)`?
+
+---
+## 2026-11-11 15:27, in .
+
+**Me:** How does a range of number works?
+
+**Tutor:**
+
+The range() function creates a sequence of numbers.
+
+```python
+# Create a range from 0 to 4 (5 is not included)
+numbers = range(5)
+
+# Loop through the range
+for num in numbers:
+    print(num)  # TODO: What will this print?
+```
+
+What is the first number printed by this loop?
+
+---
+## 2026-11-11 15:28, in .
+
+**Me:** How to write a range with a number N to be defined?
+
+**Tutor:**
+
+Writing a range with a variable N.
+
+```python
+# TODO: Replace N with your number
+n = 5
+my_range = range(n)
+```
+
+What function do you pass the variable `n` to create a range from 0 to n-1?
