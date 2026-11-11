@@ -70,6 +70,6 @@ removed_number_last = sorted_list.pop()
 print("The removed item from the sorted list is : ", removed_number_last)
 print("The sorted list after removing the last item is : ", sorted_list)
 
-# Check it yourself
+# Check it yourself:
 # I added the first three days by hand (2 + 3 + 1 = 6) and the program gave the same result. 
 # The total is 22 and the average is 2.75, which matches what I calculated by hand.

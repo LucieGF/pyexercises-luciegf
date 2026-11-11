@@ -47,14 +47,30 @@ person = {
     "name": name,
     "age": age,
     "city": city,
-    "country": country
+    "country": country,
     "favorite_brand": favorite_brand
     }
-
 
 print("The person's age is: ", person["age"])
 print("The person's name is: ", person["name"])
 print("The person's city is: ", person["city"])
 print("The person's country is: ", person["country"])
-print("The person's favorite brand is: ", person["favorite brand"])
+print("The person's favorite brand is: ", person["favorite_brand"])
 
+# Changes one field: 
+person["city"] = "Lyon"
+print("The new city is:", person["city"])
+
+# Removes age field:
+person_age = person.pop("age")
+print("The person's age was:", person_age)
+
+# Shows every remaining field with its value
+for key in person:
+    print(key, ":", person[key])
+
+# Asks for a field that does not exist, without crashing
+print("Email:", person.get("email", "this field does not exist"))
+
+# Check it yourself: when I asked for "email", the program crashed with because this field does not exist. 
+# I fixed it with .get(), which shows a message instead of crashing.

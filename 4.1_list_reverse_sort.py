@@ -25,7 +25,7 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In: The input is the list of 8 numbers from exercise 4.0: the number of coffees I drink each day.
+# 1. In: The input is the list of 8 numbers from exercise 4.0 (number of coffees I drink each day).
 # 2. Process: The program reorders the list in four different ways, using methods that create a new list, or a copy, so that the original is never changed.
 # 3. Out: The list in four different orders, then the original list at the end to prove that it has not moved.
 # 4. My four orders, and which ones modify the original: 
