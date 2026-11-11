@@ -26,10 +26,10 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My two fields, and what I would do with them:
+# 1. In: The user types two pieces of information on the keyboard: a name and an age.
+# 2. Process: The program stores each answer in a variable (name and age), then puts them together in sentences.
+# 3. Out: Three lines on the screen: one with the name, one with the age, and one full sentence that uses both.
+# 4. My two fields, and what I would do with them: I chose name and age, like the professor.
 
 
 # Your code below
@@ -39,4 +39,4 @@ age = input("Enter your age:")
 print("My name is ", name )
 print("My age is ", age)
 
-print("My name is " + name + "and my age is " + age)
+print("My name is " + name + " and my age is " + age)
