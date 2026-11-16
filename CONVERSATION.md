@@ -480,3 +480,21 @@ while True:
 ```
 
 What loop control statement breaks the loop when the input is valid?
+
+---
+## 2026-11-16 15:52, in .
+
+**Me:** "What is return function?"
+
+**Tutor:**
+
+A **return** statement sends a value back from a function to the caller.
+
+```python
+def calculate_profit(cost, revenue):
+    # TODO: compute the difference and return it
+    profit = revenue - cost
+    return profit
+```
+
+What does the line `return profit` do when the function is called?
