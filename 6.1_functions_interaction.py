@@ -58,7 +58,6 @@ def to_percentage(part, total):
     return round(part / total * 100, 1)
 
 
-# Uses the three functions above to answer the question
 def heavy_days_summary(daily_coffees, limit):
     total_days = count_days(daily_coffees)
     heavy_days = count_heavy_days(daily_coffees, limit)

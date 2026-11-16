@@ -44,7 +44,7 @@ def average_coffees_per_day(daily_coffees):
         return None
     return round(sum(daily_coffees) / len(daily_coffees), 2)
 
-# List from exercise 4.0, and two other weeks to compare:
+# List from exercise 4.0, and two other weeks:
 coffees = [2, 3, 1, 4, 2, 3, 5, 2]
 calm_week = [1, 1, 2, 1, 0, 1, 2]
 busy_week = [5, 6, 4, 7, 5, 6, 8]
