@@ -29,10 +29,66 @@ DELIVERABLE
     This file, plus the CSV your program produced.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out, file name and columns:
-# 4. Why these columns, and what this file is for:
+# 1. In: The user types three pieces of information on the keyboard: the name of a client, the product bought and the amount in euros. 
+# The date is added automatically by the program. Everything typed arrives as text.
+# 2. Process: The program asks each question until the answer is acceptable (a text that is not empty, and an amount that is a number greater than 0).
+# Then it checks if the file already exists. If not, it writes the header line first. 
+# Then it adds one line at the end of the file, without erasing the previous ones.
+# 3. Out, file name and columns: The file is sales.csv, with a semicolon as separator. 
+# The columns are: date, client_name, product, amount. Each run adds exactly one line.
+# 4. Why these columns, and what this file is for: This is a simple sales log of a boutique. 
+# With two hundred rows, I could calculate the total revenue, see which products sell the most, and find which clients buy often to offer them a personal service. 
+# The date lets me see sales by month.
 
+# Decisions: the first time, the file does not exist, so the program creates it
+# with the header line. If a value is not acceptable (empty text, or an amount
+# that is not a positive number), the program asks again.
 
 # Your code below
+import csv
+import os
+from datetime import date
+
+FILENAME = "sales.csv"
+COLUMNS = ["date", "client_name", "product", "amount"]
+
+
+def ask_text(question):
+    answer = input(question).strip()
+    while answer == "":
+        answer = input("This cannot be empty. " + question).strip()
+    return answer
+
+
+def ask_amount(question):
+    while True:
+        answer = input(question).strip().replace(",", ".")
+        try:
+            amount = float(answer)
+            if amount > 0:
+                return amount
+            print("The amount must be greater than 0.")
+        except ValueError:
+            print("Please type a number, for example 450.")
+
+
+def save_entry(entry):
+    is_new_file = not os.path.exists(FILENAME)
+    with open(FILENAME, "a", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file, delimiter=";")
+        if is_new_file:
+            writer.writerow(COLUMNS)
+        writer.writerow(entry)
+
+
+# Collects the information of one entry and saves it
+client_name = ask_text("Client name: ")
+product = ask_text("Product bought: ")
+amount = ask_amount("Amount in EUR: ")
+
+save_entry([date.today(), client_name, product, amount])
+print("Entry saved in", FILENAME)
+
+
+# Check it yourself : I ran the program three times. The file sales.csv has 4 lines: one header line and three entries. 
+# I also typed "abc" as an amount and an empty name, and the program asked again without crashing.
